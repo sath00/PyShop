@@ -1,0 +1,12 @@
+username: admin
+email: my personal email
+password: my usual password
+blockage:
+    what: adding product in the admin area causes ERROR
+    solution: https://stackoverflow.com/questions/53637182/django-no-such-table-main-auth-user-old
+    for me, it was from my django version (that was 2.1) install higher version (I used 2.1.5 for some reasons) ** delete db.sqlite3, and everything in migration folder except init.py run command:
+        pip install django==2.1.5 --upgrade
+        python manage.py makemigrations
+        python manage.py migrate
+        python manage.py createsuperuser
+        python manage.py runserver
